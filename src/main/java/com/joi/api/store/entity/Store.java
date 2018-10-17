@@ -74,8 +74,28 @@ public class Store {
     @Column(name = "state_id")
     private int stateId;
     @Column(name = "country_id")
-    private int countryId;
+    private short countryId;
 
+    @Column(name="ar_name")
+    private String arabicName;
+   
+    @Column(name="currency_en_name")
+    private String currencyEnName;
+    @Column(name="currency_ar_name")
+    private String currencyArName;
+ 
+    @Column(name="state_en_name")
+    private String stateEnName;
+    @Column(name="state_ar_name")
+    private String stateArName;
+  
+    @Column(name="country_en_name")
+    private String countryEnName;
+    @Column(name="country_ar_name")
+    private String countryArName;
+    @Column(name="store_group_name")
+    private String storeGroupName;
+    
     public Integer getId() {
         return id;
     }
@@ -90,6 +110,94 @@ public class Store {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getArabicName() {
+        return arabicName;
+    }
+
+    public void setArabicName(String arabicName) {
+        this.arabicName = arabicName;
+    }
+
+    public int getCurrencyId() {
+        return currencyId;
+    }
+
+    public void setCurrencyId(int currencyId) {
+        this.currencyId = currencyId;
+    }
+
+    public String getCurrencyEnName() {
+        return currencyEnName;
+    }
+
+    public void setCurrencyEnName(String currencyEnName) {
+        this.currencyEnName = currencyEnName;
+    }
+
+    public String getCurrencyArName() {
+        return currencyArName;
+    }
+
+    public void setCurrencyArName(String currencyArName) {
+        this.currencyArName = currencyArName;
+    }
+
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+    }
+
+    public String getStateEnName() {
+        return stateEnName;
+    }
+
+    public void setStateEnName(String stateEnName) {
+        this.stateEnName = stateEnName;
+    }
+
+    public String getStateArName() {
+        return stateArName;
+    }
+
+    public void setStateArName(String stateArName) {
+        this.stateArName = stateArName;
+    }
+
+    public short getCountryId() {
+        return countryId;
+    }
+
+    public void setCountryId(short countryId) {
+        this.countryId = countryId;
+    }
+
+    public String getCountryEnName() {
+        return countryEnName;
+    }
+
+    public void setCountryEnName(String countryEnName) {
+        this.countryEnName = countryEnName;
+    }
+
+    public String getCountryArName() {
+        return countryArName;
+    }
+
+    public void setCountryArName(String countryArName) {
+        this.countryArName = countryArName;
+    }
+
+    public String getStoreGroupName() {
+        return storeGroupName;
+    }
+
+    public void setStoreGroupName(String storeGroupName) {
+        this.storeGroupName = storeGroupName;
     }
 
     public String getUrl() {
@@ -244,21 +352,13 @@ public class Store {
         this.currencyName = currencyName;
     }
 
-    public int getCurrencyId() {
-        return currencyId;
-    }
+  
 
-    public void setCurrencyId(int currencyId) {
-        this.currencyId = currencyId;
-    }
+   
 
-    public String getCurrencyCode() {
-        return currencyCode;
-    }
+  
 
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = currencyCode;
-    }
+   
 
     public String getCustomerformatting() {
         return customerformatting;
@@ -300,12 +400,8 @@ public class Store {
         this.stateId = stateId;
     }
 
-    public int getCountryId() {
-        return countryId;
-    }
+   
 
-    public void setCountryId(int countryId) {
-        this.countryId = countryId;
-    }
+  
 
 }
