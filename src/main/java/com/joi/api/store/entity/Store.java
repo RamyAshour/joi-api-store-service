@@ -59,8 +59,7 @@ public class Store {
     private String assetUrl;
     @Column(name = "ApiUrl")
     private String apiUrl;
-    @Column(name = "currency_name")
-    private String currencyName;
+   
     @Column(name = "currency_id")
     private int currencyId;
     @Column(name = "currency_Code")
@@ -76,8 +75,8 @@ public class Store {
     @Column(name = "country_id")
     private short countryId;
 
-    @Column(name="ar_name")
-    private String arabicName;
+    @Column(name="store_name_ar")
+    private String storeNameAr;
    
     @Column(name="currency_en_name")
     private String currencyEnName;
@@ -112,12 +111,12 @@ public class Store {
         this.name = name;
     }
 
-    public String getArabicName() {
-        return arabicName;
+    public String getStoreNameAr() {
+        return storeNameAr;
     }
 
-    public void setArabicName(String arabicName) {
-        this.arabicName = arabicName;
+    public void setStoreNameAr(String storeNameAr) {
+        this.storeNameAr = storeNameAr;
     }
 
     public int getCurrencyId() {
@@ -344,13 +343,7 @@ public class Store {
         this.apiUrl = apiUrl;
     }
 
-    public String getCurrencyName() {
-        return currencyName;
-    }
-
-    public void setCurrencyName(String currencyName) {
-        this.currencyName = currencyName;
-    }
+    
 
   
 
