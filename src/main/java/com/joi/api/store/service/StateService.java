@@ -23,8 +23,7 @@ public class StateService implements IStateService {
 
     @Override
     public List<State> getAllStates() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    return stateRepository.findAll();
+         return stateRepository.findAll();
     }
   @Override
     public List<State> findAllStatesByCountry(Integer id) {

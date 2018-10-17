@@ -24,7 +24,7 @@ public class StoreGroup {
      private Integer id;
      @Column(name="Name")
      private String name;
-      @Column(name="SeoCode")
+     @Column(name="SeoCode")
      private String seoCode;
 
     public Integer getId() {
