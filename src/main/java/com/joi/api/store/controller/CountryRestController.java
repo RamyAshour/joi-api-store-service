@@ -13,6 +13,7 @@ import com.joi.api.store.service.IStateService;
 import com.joi.api.store.service.IStoreService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +38,7 @@ public class CountryRestController {
      {
         return countryService.getAllCountries();
      }
-     
+     @Cacheable(value = "CountryRestController_getAllMobileCountries" ,key = "{#p0,#p1}")
      @GetMapping("/mobilecountry/{languageid}/{storegroup}")
      public List<MobileCountryDTO> getAllMobileCountries(@PathVariable("languageid")byte languageId, @PathVariable("storegroup")int storeGroup)
      {
